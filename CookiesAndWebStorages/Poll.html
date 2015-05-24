@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poll</title>
+	<script type="text/javascript" src="Poll.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<h3 class="timer"></h3>
+	<div>1.What's your favorite language</div>
+	<div id="answer1">
+	<input type="radio" value="c++" name="question1">C++ <br>
+	<input type="radio" value="javaScript" name="question1" >JavaScript<br>
+	<input type="radio" value="php" name="question1">PHP <br>
+	<input type="radio" value="c#" name="question1">C# <br>
+	</div>
+	<br>
+	<div>2.What's your favorite sport</div>
+	<input type="radio" value="jogging" name="question2">Jogging <br>
+	<input type="radio" value="football" name="question2">Football <br>
+	<input type="radio" value="tennis" name="question2">Tennis <br>
+	<input type="radio" value="swimming" name="question2">Swimming <br>
+	<br>
+	<input type="submit" id="submit"><br><br>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			answerQuestion();
+		})
+	</script>
+</body>
+</html>

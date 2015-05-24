@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Background Color Switch</title>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body> 
+	 <div id="wrapper">
+	 	<ul id="ul">
+		    <li class="bird">Hummingbird</li>
+		    <li class="bird">Nightingale</li>
+		    <li>Lizard</li>
+		    <li class="bird">Eagle</li>
+		    <li class="bird">Sparrow</li>
+		</ul>
+		<label>Class:</label>
+		<input type= "text" id="text"></input>
+		<br><br>
+		<label>Color:</label>
+		<input type="color" id="color"></input>
+		<br>
+		<button id="button">Paint</button>
+	 </div>
+  <script type="text/javascript">
+  		function clickFunck (argument) {
+  			var $classValue = $("#text").val();
+  			var $color = $("#color").val();
+  			$('.' + $classValue).css({"background-color": $color});
+  		}
+  		$("#button").on("click",clickFunck);
+  </script>
+</body>
+</html>

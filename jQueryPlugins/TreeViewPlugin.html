@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TreeView Plugin</title>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="TreeViewPlugin.js"></script>
+	<style>
+		#item{
+			color: red;
+		}
+		#lastSubItem{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Item</li>
+		<li id="item">Item</li>
+			<ul id="subItem">
+				<li>Sub item</li>
+				<li id="lastSubItem">Sub item</li>
+					<ul id="InSubItem">
+						<li>Sub item</li>
+						<li>Sub item</li>
+					</ul>
+				<li>Sub item</li>
+			</ul>
+		<li>Item</li>
+		<li>Item</li>
+		<li>Item</li>
+		
+	</ul>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#item').treeViewSubItem();
+			$('#item').treeViewItem();
+			
+			$('#item').click(function(){
+				$().treeViewItem();
+			})
+			$('#lastSubItem').click(function(){
+				$().treeViewSubItem();
+			})
+		});
+	</script>
+</body>
+</html>

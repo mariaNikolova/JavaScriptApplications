@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Table Generator</title>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="TableGenerator.css">
+</head>
+
+<body>
+	<input type="button" id="button" value="Create Table Cars" />
+    <h1 style="text-align: center">JSON TABLE</h1>
+    <table id="cars">
+        <td class="main">Manufactures</td>
+        <td class="main">Model</td>
+        <td class="main">Year</td>
+        <td class="main">Price</td>
+        <td class="main">Class</td>
+    </table>
+	<script type="text/javascript">
+		var json = [
+			{
+				"manufacturer":"BMW",
+				"model":"E92 320i",
+				"year":2011,
+				"price":50000,
+				"class":"Family"
+			},
+			{
+				"manufacturer":"Porsche",
+				"model":"Panamera",
+				"year":2012,
+				"price":100000,
+				"class":"Sport"
+			},
+			{
+				"manufacturer":"Peugeot",
+				"model":"305",
+				"year":1978,
+				"price":1000,
+				"class":"Family"
+			}
+		];
+		function generateTable(){
+			$(json).each(function(_,car){
+				$('tbody')
+					.append(
+						($('<tr>').append($('<td>').html(car.manufacturer)))
+						.append($('<td>').html(car.model))
+						.append($('<td>').html(car.year))
+						.append($('<td>').html(car.price))
+						.append($('<td>').html(car.class))
+						);
+			});
+		}
+		$("#button").on("click",generateTable);
+	</script>
+</body>
+</html>

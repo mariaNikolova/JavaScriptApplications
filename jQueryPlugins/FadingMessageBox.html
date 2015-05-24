@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fading Message Box</title>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="FadingMessageBox.js"></script>
+</head>
+<body>
+	<div id="message-box">
+		<button id="SuccessMessage">Success</button>
+		<button id="ErrorMessage">Error</button>
+		<div id="message"></div>
+	</div>
+	 <script>
+        $(document).ready(function () {
+           $('#SuccessMessage').click(function(){
+           	$().messageSuccess()
+           });
+
+           $('#ErrorMessage').click(function(){
+           	$().messageError()
+           });
+            
+        });
+    </script>
+</body>
+</html>

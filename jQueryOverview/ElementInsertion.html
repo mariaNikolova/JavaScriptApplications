@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Element Insertion</title>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body> 
+	 <div id="wrapper"></div>
+  <script type="text/javascript">
+  	$wrapper = $("#wrapper");
+  	$wrapper.append("<h1>Hello!</h1>") ;
+  	$wrapper.append("<button></button>");
+  	$wrapper.append("<ul></ul>");
+    $("ul").attr("id","list");
+
+  	function onButtonClick (ev) {
+  		$("#list").append(
+  			     $("<li />")
+  				 .addClass("item")
+  				 .html('Hello I am jQuery!')
+  				 );
+  	}
+  	$("button")
+  		.on('click', onButtonClick)
+  		.html('Click here please!')
+  		.appendTo(document.body);
+  </script>
+
+</body>
+</html>
